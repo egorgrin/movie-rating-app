@@ -1,7 +1,10 @@
 import {Grid, Header, Form, Segment, Button} from "semantic-ui-react";
 import {useMutation} from "@tanstack/react-query";
 import {mutationLogin} from "./mutation.ts";
-import {useEffect, useRef} from "react";
+import {
+  useEffect,
+  // useRef
+} from "react";
 
 export const Auth = () => {
 
@@ -20,7 +23,7 @@ export const Auth = () => {
   }
 
   useEffect(() => {
-    // console.log(`Data is ${data}`)
+    console.log(data)
     if (data) {
       localStorage.setItem('guest_session_id', data?.guest_session_id)
     }
